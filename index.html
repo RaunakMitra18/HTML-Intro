@@ -4,6 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Development</title>
+    <style>
+      .testClass{
+        background-color: greenyellow;
+        color:red;
+        /* lowest priority */
+      }
+      li{
+        border: 1px solid black;
+        /* color:green; */
+        /* highest priority */
+      }
+      #sublists{
+        color:blue
+        /* second priority */
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -12,7 +28,7 @@
 
       <!-- this is a nav tag for the nav bar-->
       <nav>	
-        <ul style = "color:red;list-style-type:circle">
+        <ul style = "color:green;list-style-type:circle">
           <li><a href="#languages">Languages</a></li>
           <li><a href="#practices">Practices and Projects</a></li>
           <li><a href="#subscribe">Subscribe</a></li>
@@ -27,22 +43,21 @@
         width="600"
       />
       <h2 id="languages">Languages</h2>
-      <ol style="background-color:rgba(255, 255, 0, 0.76);border:5px solid aqua">
-        <li><input type="checkbox" /> HTML</li>
+      <ol class="testClass" style="background-color: yellow;">
+        <li style="background-color: grey;"><input type="checkbox" /> HTML</li>
         <li><input type="checkbox" /> CSS</li>
         <li><input type="checkbox" /> JavaScript</li>
 		
         <li><input type="checkbox" />FrontEnd </li>
-			<ul>
+			<ul id="sublists">
 				<li><input name= "UX" type="radio" /> React</li>
 				<li><input name= "UX" type="radio" /> Angular</li>
 				<li><input name= "UX" type="radio" /> Vue</li>
 				<li><input name= "UX" type="radio" /> Svelte</li>
-			</ul>
-		</li>
-		
+      </ul>
+
 		<li><input type="checkbox" />BackEnd </li>
-			<ul>
+			<ul id="sublists">
 				<li><input name= "Framework" type="radio" /> Node</li>
 				<li><input name= "Framework" type="radio" /> Django</li>
 				<li><input name= "Framework" type="radio" /> Ruby on Rails</li>
@@ -52,7 +67,7 @@
         <li><input type="checkbox" /> Database SQL/NoSQL</li>
       </ol>
       <h2 id="practices">Practices and Projects</h2>
-      <div style="background-color:rgba(255, 255, 0, 0.76);border:5px solid aqua"> 
+      <div class="testClass"> 
       <h4>Step 1</h4>
       <p>
         Start by learning basic HTML, CSS. Make a simple static website to test your knowledge.
@@ -91,7 +106,7 @@
         <button>Submit</button>
       </form>
       <br />
-      <div>Raunak Mitra at <a href="https://www.linkedin.com/in">LinkedIn<a/></div>
+      <div>Raunak Mitra at <a href="https://www.linkedin.com/in">LinkedIn</a></div>
     </footer>
   </body>
 </html>
